@@ -1,0 +1,5 @@
+const questions = document.querySelector('#question')
+const choices = Array.from(document.querySelector('#choice-text'))
+const progressText = document.querySelector('#progressText')
+const scoreText = document.querySelector('#qscore')
+const progressTextFull = document.querySelector('#progressBarFull')
