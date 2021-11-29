@@ -64,7 +64,7 @@ h2{
     padding: 2rem 0;
     width: 30rem;
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-decoration: none;
     color: rgb(28,26,26);
     background: linear-gradient(90deg, rgb(18, 92,255)0%, rgb(0, 102, 255) 100%);
@@ -73,8 +73,8 @@ h2{
 
 .bth:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 144,244,0.6);
-    transform: transform 150ms;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(8, 144,244, 0.6);
+    transition: transform 150ms;
     transform: scale(1.03);
 }
 

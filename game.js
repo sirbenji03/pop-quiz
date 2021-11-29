@@ -5,7 +5,7 @@ const scoreText = document.querySelector('#score');
 const progressBarFull = document.querySelector('#progressBarFull');
 
 
-let currentQuestion = {};
+let currentQuestion = {}
 let acceptingAnswers = true
 let score = 0
 let questionCounter = 0
@@ -13,7 +13,7 @@ let availableQuestions = []
 
 let questions = [
     {
-        question: 'Commonly used data type Do Not Include ?',
+        question: "Commonly used data type Do Not Include ?",
         choice1: "string",
         choice2: "booleans",
         choice3: "alerts",
@@ -21,7 +21,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: 'Arrays in Javascript can be used to store ?',
+        question: "Arrays in Javascript can be used to store ?",
         choice1: "numbers and strings",
         choice2: "other arrays",
         choice3: "boolens",
@@ -29,7 +29,7 @@ let questions = [
         answer: 4,
     },
     {
-        question: 'String values must be enclosed within_____when being assigned to variables ?',
+        question: "String values must be enclosed within_____when being assigned to variables ?",
         choice1: "commas",
         choice2: "curly brackets",
         choice3: "quotes",
@@ -37,7 +37,7 @@ let questions = [
         answer: 3,
     },
     {
-        question: 'A very useful tool used during development and debugging for printing content to the deugger is?',
+        question: "A very useful tool used during development and debugging for printing content to the deugger is?",
         choice1: "javascipt",
         choice2: "terminal/bash",
         choice3: "for loops",
@@ -46,7 +46,7 @@ let questions = [
     }
 ]
 
-const SCORE_POINTS =100
+const SCORE_POINTS = 100
 const MAX_QUESTIONS = 4
 
 
@@ -96,19 +96,20 @@ choices.forEach(choice => {
             incrementScore(SCORE_POINTS)
         }
 
-    selectedChoice.parentElement.classList.add(classToApply)
+        selectedChoice.parentElement.classList.add(classToApply)
 
-    setTimeout(() =>{
-        selectedChoice.parentElement.classList.remove(classToApply)
-        getNewQuestions()
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
 
-    }, 1000)
+        }, 1000)
     })
-
-    incrementScore = num => {
-        score +=num 
-        scoreText.innerText = score
-    }
-
-    startGame()
+   
 })
+
+incrementScore = num => {
+    score +=num 
+    scoreText.innerText = score
+}
+
+startGame() 
